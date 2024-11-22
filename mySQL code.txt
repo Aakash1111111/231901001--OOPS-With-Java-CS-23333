@@ -1,0 +1,58 @@
+Create database Nutrition;
+
+
+CREATE TABLE weight_gain (
+    day VARCHAR(10) PRIMARY KEY,
+    morning_meal VARCHAR(100),
+    afternoon_meal VARCHAR(100),
+    evening_meal VARCHAR(100),
+    total_calories INT
+);
+
+CREATE TABLE weight_loss (
+    day VARCHAR(10) PRIMARY KEY,
+    morning_meal VARCHAR(100),
+    afternoon_meal VARCHAR(100),
+    evening_meal VARCHAR(100),
+    total_calories INT
+);
+
+CREATE TABLE balanced (
+    day VARCHAR(10) PRIMARY KEY,
+    morning_meal VARCHAR(100),
+    afternoon_meal VARCHAR(100),
+    evening_meal VARCHAR(100),
+    total_calories INT
+);
+
+-- Populate the weight_gain table with meals for each day of the week
+INSERT INTO weight_gain (day, morning_meal, afternoon_meal, evening_meal, total_calories) VALUES
+('Monday', 'Oatmeal with bananas and nuts', 'Grilled chicken sandwich and salad', 'Salmon with quinoa and veggies', 2500),
+('Tuesday', 'Egg and avocado toast', 'Pasta with lean meat sauce', 'Steak with baked potato and broccoli', 2600),
+('Wednesday', 'Greek yogurt with honey and berries', 'Turkey wrap with mixed greens', 'Grilled chicken with rice and beans', 2400),
+('Thursday', 'Smoothie with protein powder, spinach, and fruits', 'Chicken burrito bowl with brown rice', 'Shrimp stir-fry with noodles', 2500),
+('Friday', 'Whole grain pancakes with peanut butter', 'Burger with whole wheat bun and sweet potato fries', 'Baked fish with couscous', 2550),
+('Saturday', 'Scrambled eggs with cheese and toast', 'Quinoa salad with chickpeas and veggies', 'Chicken stir-fry with noodles', 2600),
+('Sunday', 'Bagel with cream cheese and smoked salmon', 'Grilled chicken and roasted vegetables', 'Steak with mashed potatoes', 2700);
+
+-- Populate the weight_loss table with meals for each day of the week
+INSERT INTO weight_loss (day, morning_meal, afternoon_meal, evening_meal, total_calories) VALUES
+('Monday', 'Green smoothie with spinach and banana', 'Grilled chicken salad with vinaigrette', 'Soup with mixed vegetables and lean meat', 1200),
+('Tuesday', 'Greek yogurt with almonds and berries', 'Veggie wrap with hummus', 'Baked salmon with asparagus', 1300),
+('Wednesday', 'Oatmeal with chia seeds and fruit', 'Zucchini noodles with marinara sauce', 'Grilled chicken with steamed broccoli', 1250),
+('Thursday', 'Scrambled eggs with bell peppers', 'Lentil soup with side salad', 'Turkey meatballs with roasted cauliflower', 1300),
+('Friday', 'Smoothie bowl with berries and nuts', 'Chickpea salad with cucumbers and tomatoes', 'Grilled shrimp with mixed greens', 1350),
+('Saturday', 'Avocado toast on whole grain bread', 'Quinoa bowl with veggies and tofu', 'Stir-fried veggies with tofu', 1400),
+('Sunday', 'Boiled eggs and fruit', 'Mixed greens salad with grilled fish', 'Zucchini noodles with pesto and veggies', 1200);
+
+-- Populate the balanced table with meals for each day of the week
+INSERT INTO balanced (day, morning_meal, afternoon_meal, evening_meal, total_calories) VALUES
+('Monday', 'Eggs and avocado toast', 'Chicken and quinoa salad', 'Fish and steamed veggies', 1600),
+('Tuesday', 'Smoothie bowl with banana and almond butter', 'Turkey wrap with mixed greens', 'Grilled chicken with brown rice', 1700),
+('Wednesday', 'Whole grain toast with scrambled eggs and salsa', 'Shrimp stir-fry with vegetables', 'Pasta with marinara sauce', 1650),
+('Thursday', 'Overnight oats with berries and nuts', 'Grilled chicken and veggie wrap', 'Salmon with sweet potatoes', 1600),
+('Friday', 'Greek yogurt with honey and granola', 'Veggie burger on whole wheat bun', 'Chicken stir-fry with brown rice', 1700),
+('Saturday', 'Smoothie with spinach, protein powder, and mango', 'Chickpea salad with cucumbers and tomatoes', 'Baked fish with steamed vegetables', 1550),
+('Sunday', 'Boiled eggs with whole-grain toast', 'Mixed greens salad with nuts and seeds', 'Grilled tofu with stir-fried vegetables', 1600);
+
+
